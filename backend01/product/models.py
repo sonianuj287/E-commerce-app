@@ -6,7 +6,7 @@ class Product(models.Model):
     description =models.CharField(max_length=500)
     price= models.IntegerField(default=0)
     quantity = models.IntegerField(default=0)
-    author = models.JSONField(default = list,blank=True)
+    author = models.JSONField(default = list,blank=False)
 
     def __str__(self):
         return f"{self.name} by {self.author}"

@@ -101,6 +101,7 @@ class ProductAPI(APIView):
         username=request.data.get("name")
 
         try:
+            print(username)
             product = Product.objects.get(name=username)
             product.delete()
             return Response("Product deleted successfully", status= status.HTTP_200_OK)
